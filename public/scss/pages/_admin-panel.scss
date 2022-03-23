@@ -1,0 +1,31 @@
+.admin {
+  display: flex;
+  &__panel {
+    flex: 0 0 15%;
+    background-color: var(--color-secondary-1);
+    color: white;
+    min-height: 100vh;
+    &--items {
+      list-style-type: none;
+      margin-top: 5rem;
+    }
+    &--item {
+      font-size: 2rem;
+      transition: border ease 0.5s;
+      border: none;
+      padding: 1rem;
+      color: white;
+      text-decoration: none;
+      display: block;
+      &:hover {
+        border-bottom: 3px solid white;
+        cursor: pointer;
+      }
+    }
+  }
+  &__refactor {
+    flex: 0 0 85%;
+    background-color: var(--color-grey-light-5);
+    padding-top: 5rem;
+  }
+}

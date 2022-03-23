@@ -1,0 +1,52 @@
+.comments {
+  background-color: white;
+  padding: 3rem 6rem;
+  width: 60%;
+  margin: 4rem auto;
+
+  &__group {
+    margin-bottom: 1.5rem;
+    &--label {
+      color: var(--color-secondary-1);
+      display: block;
+      font-size: 1.4rem;
+    }
+    &--input {
+      padding: 0.7rem;
+      width: 60%;
+      font-family: "Poppins", sans-serif;
+    }
+  }
+}
+.updating {
+  background-color: white;
+  width: 60%;
+  margin: 2rem auto;
+  padding: 2rem 2rem 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__image {
+    width: 10rem;
+    height: 10rem;
+
+    & > img {
+      width: 100%;
+    }
+  }
+  &__topic {
+    font-size: 1.4rem;
+  }
+  &__date {
+    font-size: 1.4rem;
+    color: var(--color-secondary-1);
+  }
+  &__x {
+    fill: red;
+    height: 5rem;
+    width: 5rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

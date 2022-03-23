@@ -1,0 +1,327 @@
+///////BOXES UNDER THE HOMEPAGE MAIN SLIDE///////
+.section__boxes {
+  display: flex;
+
+  @include respond(phone-large) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    margin-top: 1rem;
+    grid-gap: 1rem;
+  }
+}
+.box {
+  padding: 4rem 2rem 6rem 2rem;
+  text-align: center;
+
+  @include respond(phone-large) {
+    padding: 2rem;
+  }
+  &-icon {
+    height: 10rem;
+    width: 10rem;
+    fill: white;
+
+    @include respond(phone-large) {
+      height: 6rem;
+      width: 6rem;
+    }
+  }
+  &:nth-child(odd) {
+    background-color: var(--color-secondary-1);
+  }
+  &:nth-child(even) {
+    background-color: var(--color-primary-1);
+  }
+}
+
+/////NELER SUNUYORUZ////////
+.section__offer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10rem;
+  @include respond(phone-large) {
+    margin: 2rem;
+  }
+}
+.offer {
+  &__text {
+    flex: 0 0 60%;
+    padding-top: 8rem;
+    @include respond(phone-large) {
+      flex: 0 0 100%;
+    }
+  }
+  &__boxes {
+    margin-top: 6rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-column-gap: 2rem;
+    grid-row-gap: 6rem;
+    align-items: start;
+  }
+  &__box {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+    &-container {
+      grid-row: 1 / span 2;
+      background: var(--color-secondary-1);
+      height: 8rem;
+      width: 8rem;
+      position: relative;
+      border-radius: 50%;
+      @include respond(phone-large) {
+        height: 6rem;
+        width: 6rem;
+      }
+      &-icon {
+        position: absolute;
+        transform: translate(85%, 85%);
+        fill: azure;
+        height: 3rem;
+        width: 3rem;
+        @include respond(phone-large) {
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+    }
+    &-main {
+      font-size: 2.2rem;
+    }
+    &-sub {
+      font-size: 1.54rem;
+    }
+  }
+  &__img {
+    flex: 0 0 45%;
+    align-self: center;
+    @include respond(phone-large) {
+      display: none;
+    }
+
+    & > img {
+      width: 100%;
+    }
+  }
+}
+
+/////SECTION-LOCATION ////
+.location {
+  margin-top: 8rem;
+  height: 80vh;
+  max-width: 140rem;
+  //background-attachment: fixed;
+  background-image: linear-gradient(
+    to right,
+    rgba($color-secondary-1, 0.85),
+    rgba($color-primary-1, 0.85)
+  );
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  @include respond(phone-large) {
+    flex-direction: column;
+    text-align: center;
+  }
+  @include respond(phone-medium) {
+    height: 70rem;
+  }
+
+  &__img {
+    flex: 0 0 30%;
+    & > img {
+      width: 100%;
+      box-shadow: 0px 6px 30px 5px rgba(0, 0, 0, 0.25);
+      @include respond(phone-large) {
+        width: 50%;
+        text-align: center;
+      }
+    }
+  }
+  &__info {
+    flex: 0 0 40%;
+
+    &-detail {
+      line-height: 3rem;
+      letter-spacing: 0.1rem;
+
+      &::first-letter {
+        font-size: 4.3rem;
+      }
+    }
+  }
+}
+//LESSONS
+.lessons {
+  padding-top: 8rem;
+  text-align: center;
+
+  &__boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    margin: 2rem 4rem;
+    @include respond(phone-large) {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      grid-gap: 5rem;
+    }
+    @include respond(phone-medium) {
+      justify-items: center;
+    }
+  }
+
+  &__box {
+    width: 25rem;
+    box-shadow: var(--color-grey-light-5) 0px 3px 8px;
+    @include respond(phone-large) {
+      width: 22rem;
+    }
+
+    &--img {
+      height: 25rem;
+      width: 25rem;
+      @include respond(phone-large) {
+        height: 22rem;
+        width: 22rem;
+      }
+    }
+  }
+
+  &__icons {
+    font-size: 1.3rem;
+    @include respond(phone-large) {
+      font-size: 1rem;
+    }
+  }
+
+  &-icon {
+    width: 1.3rem;
+    height: 1.3rem;
+    fill: var(--color-secondary-1);
+  }
+  &-text {
+    margin-right: 1rem;
+  }
+}
+//STUDENTS COMMENT
+.students-comment {
+  margin-top: 5rem;
+  background-color: var(--color-grey-light-4);
+}
+/****************SECTION-ANNOUNCMENT*/ /////////////////
+.announcment {
+  margin: 5rem 2rem;
+  background-color: var(--color-grey-light-4);
+
+  &-slider {
+    max-width: 80rem;
+    height: 30rem;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    @include respond(phone-large) {
+      padding: 2rem 1rem;
+      height: 35rem;
+    }
+
+    &-btn-left {
+      left: 4%;
+      background-color: var(--color-secondary-1);
+      color: white;
+      @include respond(phone-large) {
+        left: 7%;
+      }
+    }
+    &-btn-right {
+      right: 4%;
+      background-color: var(--color-secondary-1);
+      color: white;
+      @include respond(phone-large) {
+        right: 7%;
+      }
+    }
+  }
+
+  &-slide {
+    padding: 7rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1s;
+    @include respond(phone-large) {
+      padding: 5rem;
+    }
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.testimonial {
+  &::before {
+    content: "\201C";
+    position: absolute;
+    top: -1rem;
+    left: -0.5rem;
+    line-height: 1;
+    font-size: 20rem;
+    font-family: inherit;
+    color: var(--color-secondary-1);
+    z-index: -1;
+
+    @include respond(phone-large) {
+      font-size: 12rem;
+    }
+  }
+  &__author {
+    margin-left: 3rem;
+    font-style: normal;
+
+    display: grid;
+    grid-template-columns: 6.5rem 1fr;
+    column-gap: 2rem;
+  }
+
+  &__photo {
+    grid-row: 1 / span 2;
+    width: 6.5rem;
+    border-radius: 50%;
+  }
+  &__name {
+    font-size: 1.7rem;
+    font-weight: 500;
+    align-self: end;
+    margin: 0;
+  }
+
+  &__date {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    font-size: 1.4rem;
+    color: var(--color-secondary-1);
+  }
+
+  &__button {
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-image: linear-gradient(
+      to right,
+      var(--color-secondary-1),
+      var(--color-primary-1)
+    );
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+  }
+}

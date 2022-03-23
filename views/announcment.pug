@@ -1,0 +1,33 @@
+extends base
+block content
+    .text-center
+        h2.heading-secondary.mt-m.text-center.bolder.splash
+            | Tüm Duyurular
+    section.announcments
+
+        each announcment in announcments
+            .one-announcment.announcment
+                h2.heading-secondary.bolder.mb-s.color-black-dark= announcment.subject
+                blockquote.heading-quaternary.color-black-light.mb-s= announcment.announcment
+                address.testimonial__author
+                    img.testimonial__photo(src='/img/logo.png' alt='')
+                    h6.testimonial__name= announcment.creator
+                    p.testimonial__location Paradoks Eğitim Kurumları
+                span.testimonial__date= announcment.createdAt.toLocaleString('tr-tr', {day:'numeric',month:'long',year:'numeric'})
+        if (numOfPages>1)
+            .pagination
+                ul
+                    if(page>1)
+                        li.pagination__item
+                            a.pagination__item--left(href=`/duyurular?page=${page-1}&limit=${limit}`) &larr;
+                    - var n =1;
+                    while n <= numOfPages
+                        if(n==page)
+                            li.pagination__item
+                                a.pagination__item--number.active-bg(href=`/duyurular?page=${n}&limit=${limit}`)= n++
+                        else
+                            li.pagination__item
+                                a.pagination__item--number(href=`/duyurular?page=${n}&limit=${limit}`)= n++                           
+                    if(page<numOfPages)
+                        li.pagination__item
+                            a.pagination__item--right(href=`/duyurular?page=${Number(page)+1}&limit=${limit}`) &rarr; 

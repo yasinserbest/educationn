@@ -1,0 +1,133 @@
+.footer {
+  margin-top: 3rem;
+  background-color: var(--color-secondary-1);
+  padding: 2rem 3rem;
+  font-size: 1.5rem;
+  color: white;
+  display: flex;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @include respond(phone-large) {
+    padding: 2rem 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    height: 20rem;
+    width: 40rem;
+
+    @include respond(tab-port) {
+      height: 30rem;
+      width: 50rem;
+    }
+    @include respond(phone-large) {
+      height: 15rem;
+      width: 50rem;
+      justify-content: space-evenly;
+    }
+  }
+  &__logo {
+    height: 20rem;
+    width: 20rem;
+    @include respond(tab-port) {
+      height: 30rem;
+      width: 25rem;
+    }
+    @include respond(phone-large) {
+      height: 14rem;
+      width: 14rem;
+    }
+    @include respond(phone-medium) {
+      height: 10rem;
+      width: 10rem;
+    }
+
+    & > img {
+      width: 100%;
+    }
+  }
+  &__social {
+    margin-left: 1rem;
+    font-size: 7rem;
+    display: grid;
+    grid-template-rows: 10rem 10rem;
+    grid-template-columns: 10rem 10rem;
+    @include respond(tab-port) {
+      grid-template-rows: 12rem 12rem;
+      grid-template-columns: 12.5rem 12.5rem;
+      font-size: 9rem;
+    }
+    @include respond(phone-large) {
+      grid-template-rows: 7rem 7rem;
+      grid-template-columns: 7rem 7rem;
+      font-size: 5rem;
+    }
+    @include respond(phone-medium) {
+      grid-template-rows: 5rem 5rem;
+      grid-template-columns: 5rem 5rem;
+      font-size: 4rem;
+    }
+    & > a {
+      color: white;
+      @include respond(tab-port) {
+        justify-self: center;
+        align-self: flex-start;
+      }
+    }
+    &--icon {
+      width: 9rem;
+      height: 8rem;
+      fill: white;
+      @include respond(phone-large) {
+        width: 7rem;
+        height: 6rem;
+      }
+      @include respond(phone-medium) {
+        width: 5rem;
+        height: 4rem;
+      }
+    }
+  }
+  &__location {
+    text-align: center;
+
+    &-map {
+      height: 17rem;
+      width: 40rem;
+      @include respond(tab-port) {
+        height: 28rem;
+        width: 50rem;
+      }
+      @include respond(phone-large) {
+        height: 15rem;
+        width: 45rem;
+      }
+      @include respond(phone-large) {
+        width: 38rem;
+      }
+    }
+  }
+  &__copy {
+    color: var(--color-primary-1);
+    padding: 2rem;
+    font-size: 1.5rem;
+
+    @include respond(tab-land) {
+      padding: 1rem;
+      font-size: 1.5rem;
+    }
+    @include respond(tab-port) {
+      width: 50rem;
+      padding: 2rem;
+      font-size: 2.5rem;
+    }
+    @include respond(phone-large) {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+}

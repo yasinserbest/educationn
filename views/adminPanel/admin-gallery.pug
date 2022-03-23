@@ -1,0 +1,16 @@
+extend admin-base
+block content
+    div.admin__refactor
+        .text-center
+            h2.heading-secondary.bolder.mb-s.splash Galeri Yönetimi
+        form.comments#galleries
+            div.comments__group
+                input(type='file', accept='image/*',id='photo',name='photo')
+            button.btn.btn-corner YÜKLE
+        each gallery in galleries
+            .updating#delete
+                div.updating__image
+                    img(src=`/img/gallery/${gallery.photo}` alt="")
+                button.btn-x(data-id=`${gallery.id}`)
+                    svg.updating__x
+                        use(xlink:href='/img/sprite.svg#icon-cross')

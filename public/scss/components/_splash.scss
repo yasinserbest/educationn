@@ -1,0 +1,11 @@
+.splash {
+  display: inline-block;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-secondary-1),
+    var(--color-primary-1)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

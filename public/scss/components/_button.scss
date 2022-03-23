@@ -1,0 +1,48 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    padding: 1rem 2.2rem;
+    border-radius: 10rem;
+    background-color: var(--color-secondary-1);
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+
+    @include respond(tab-port) {
+      font-size: 1.3rem;
+    }
+    @include respond(phone-large) {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+  &-login {
+    background-color: white !important;
+    color: var(--color-secondary-1) !important;
+    //font-size: 3rem;
+    @include respond(phone-medium) {
+      font-size: 1.2rem;
+    }
+  }
+  &-contact {
+    @include respond(phone-medium) {
+      display: none;
+    }
+  }
+  &-corner {
+    border-radius: 0 !important;
+  }
+  &-x {
+    background-color: transparent;
+    border: none;
+  }
+  &-forgotPassword {
+    align-self: center;
+  }
+  &:active {
+    transform: translateY(1.9px);
+  }
+}

@@ -1,0 +1,12 @@
+extends base
+block content
+    .text-center
+        h2.heading-secondary.mt-m.text-center.bolder.splash Galeri
+    section.slider.gallery-slider
+        each gallery in galleries
+            .slide.gallery-slide
+                img.slide-img.gallery-img(src=`/img/gallery/${gallery.photo}` alt=`${gallery.photo}`)
+
+        button.slider__btn.slider__btn--left &larr;
+        button.slider__btn.slider__btn--right &rarr;
+        .dots

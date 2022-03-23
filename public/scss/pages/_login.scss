@@ -1,0 +1,72 @@
+.login {
+  height: 100vh;
+  max-width: 140rem;
+  //background-attachment: fixed;
+  background-image: linear-gradient(
+    to right,
+    var(--color-secondary-1),
+    var(--color-primary-1)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62%;
+  padding: 4rem;
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+
+  &__img {
+    flex: 0 0 50%;
+    text-align: center;
+    & > img {
+      @include respond(phone-large) {
+        width: 80%;
+      }
+    }
+  }
+  &__form {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > h2 {
+      margin-bottom: 2rem;
+    }
+    &--wrapper {
+      width: 70%;
+      @include respond(tab-port) {
+        width: 100%;
+      }
+      &-label {
+        display: block;
+        color: black;
+        font-size: 1.2rem;
+      }
+      &-input {
+        width: 100%;
+        outline: none;
+        border-color: var(--color-primary-1);
+        padding: 0.5rem 1rem;
+        &:focus {
+          outline: none;
+          border-bottom: 3px solid var(--color-secondary-1);
+        }
+        &:focus:invalid {
+          border-bottom: 3px solid red;
+        }
+      }
+      & a {
+        text-decoration: none;
+        color: var(--color-secondary-1);
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+extend admin-base
+block content
+    .admin__refactor
+        .text-center
+            h2.heading-secondary.bolder.mb-s.splash
+                | Ana Sayfa Slayt Düzenleme Paneli
+        form.comments#mainSlides
+            .comments__group
+                label.comments__group--label Ana Başlık
+                input#main.comments__group--input(type='text')
+            .comments__group
+                label.comments__group--label Alt Başlık
+                input#sub.comments__group--input(type='text')
+            .comments__group
+                input(type='file', accept='image/*',id='photo',name='photo')
+            button.btn.btn-corner KAYDET
+        each mainSlide in mainsliders
+            .updating#delete
+                .updating__image
+                    img(src=`./img/mainSlider/${mainSlide.photo}` alt='')
+                span.updating__topic= mainSlide.mainHeader
+                button.btn-x(data-id=`${mainSlide.id}`)
+                    svg.updating__x
+                        use(xlink:href='./img/sprite.svg#icon-cross')

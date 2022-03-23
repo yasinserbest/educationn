@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='/css/main.css')
+        title #{title}
+    body  
+        section.admin
+            nav.admin__panel
+                ul.admin__panel--items
+                    li
+                        a.admin__panel--item(href='/admin-yorumlar') Öğrenci Yorumları
+                    li
+                        a.admin__panel--item(href='/admin-duyurular') Duyurular
+                    li
+                        a.admin__panel--item(href='/admin-galeri') Galeri
+                    li
+                        a.admin__panel--item(href='/admin-anaSlayt') Ana Slayt
+                    li
+                        a.admin__panel--item(href='/admin-sifremiGuncelle') Şifre
+                    li
+                        a.admin__panel--item.admin__panel--item-logout(href='#') Çıkış
+            block content
+    script(src="/js/bundle.js")
+

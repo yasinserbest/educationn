@@ -1,0 +1,44 @@
+.ml-m {
+  margin-left: 4rem !important;
+  @include respond(phone-large) {
+    margin-left: 0 !important;
+  }
+}
+.active {
+  color: var(--color-green-light-1) !important;
+}
+.active-bg {
+  background-color: var(--color-secondary-1) !important;
+}
+.mb-s {
+  margin-bottom: 1.5rem;
+}
+.mb-m {
+  margin-bottom: 3.5rem;
+}
+.mb-l {
+  margin-bottom: 5.5rem;
+}
+.mt-m {
+  margin-top: 3.5rem;
+}
+.mt-l {
+  margin-top: 5.5rem;
+}
+
+.lighter {
+  font-weight: 300 !important;
+}
+.bolder {
+  font-weight: 600 !important;
+}
+
+.color-black-dark {
+  color: var(--color-black-dark) !important;
+}
+.color-black-light {
+  color: var(--color-black-light) !important;
+}
+.text-center {
+  text-align: center;
+}

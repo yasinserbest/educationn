@@ -1,0 +1,39 @@
+.heading-primary {
+  font-size: 6rem;
+  color: white;
+  font-weight: 500;
+  @include respond(phone-large) {
+    font-size: 3rem;
+  }
+}
+
+.heading-secondary {
+  color: white;
+  font-size: 3rem;
+  font-weight: 300;
+
+  &-announcment,
+  &-comments {
+    padding-bottom: 3rem;
+  }
+  @include respond(phone-large) {
+    font-size: 2.2rem;
+  }
+  &--error {
+    color: red;
+  }
+}
+.heading-tertiary {
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.heading-quaternary {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  &-lessons {
+    line-height: 2.5rem;
+  }
+}

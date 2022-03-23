@@ -1,0 +1,23 @@
+extend admin-base
+block content
+    .admin__refactor
+        .text-center
+            h2.heading-secondary.bolder.mb-s.splash Duyuru Yönetimi
+        form.comments#announcments
+            .comments__group
+                label.comments__group--label(for='') Konu
+                input#subject.comments__group--input(type='text')
+            .comments__group
+                label.comments__group--label(for='') Mesaj
+                textarea#announcment.comments__group--input.comments__group--message(cols='30' rows='10')
+            .comments__group
+                label.comments__group--label(for='') Yayınlayan
+                input#creator.comments__group--input(type='text')
+            button.btn.btn-corner KAYDET
+        each announcment in announcments
+            .updating#delete
+                span.updating__topic= announcment.subject
+                span.updating__date= announcment.createdAt.toLocaleString('tr-tr', {day:'numeric',month:'long',year:'numeric'})
+                button.btn-x(data-id=`${announcment.id}`)
+                    svg.updating__x
+                        use(xlink:href='./img/sprite.svg#icon-cross')

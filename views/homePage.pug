@@ -1,0 +1,243 @@
+extends base
+block content
+    section.slider
+
+        each mainSlide in mainSlides
+            .slide
+                img.slide-img(src=`img/mainSlider/${mainSlide.photo}` alt='Photo 1')
+                .slide-overlay
+                .slide-desc
+                    h1.heading-primary= mainSlide.mainHeader
+                    h2.heading-secondary= mainSlide.subHeader
+        button.slider__btn.slider__btn--left &larr;
+        button.slider__btn.slider__btn--right &rarr;
+        .dots
+    section.section__boxes
+        .box
+            svg.box-icon.mb-s
+                use(xlink:href='/img/sprite.svg#icon-bubbles3')
+            h3.heading-tertiary.mb-s Tecrübeli öğretmenler
+            h4.heading-quaternary
+                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis vel
+                | ut tenetur officia alias dolorum!
+        .box
+            svg.box-icon.mb-s
+                use(xlink:href='/img/sprite.svg#icon-books')
+            h3.heading-tertiary.mb-s Tecrübeli öğretmenler
+            h4.heading-quaternary
+                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis vel
+                | ut tenetur officia alias dolorum!
+        .box
+            svg.box-icon.mb-s
+                use(xlink:href='/img/sprite.svg#icon-tv')
+            h3.heading-tertiary.mb-s Tecrübeli öğretmenler
+            h4.heading-quaternary
+                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis vel
+                | ut tenetur officia alias dolorum!
+        .box
+            svg.box-icon.mb-s
+                use(xlink:href='/img/sprite.svg#icon-pie-chart')
+            h3.heading-tertiary.mb-s Tecrübeli öğretmenler
+            h4.heading-quaternary
+                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis vel
+                | ut tenetur officia alias dolorum!
+    section.section__offer
+        .offer__text
+            h2.heading-secondary.bolder.mb-s.splash Neler Sunuyoruz?
+            h4.heading-quaternary.color-black-light
+                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                | nulla velit sit similique ea facere modi dolore asperiores minus
+                | temporibus ab quia corrupti ex incidunt, repellat nam omnis ipsam
+                | dolor!
+            .offer__boxes
+                .offer__box
+                    .offer__box-container
+                        svg.offer__box-container-icon
+                            use(xlink:href='/img/sprite.svg#icon-hour-glass')
+                    h2.offer__box-main.heading-secondary.color-black-dark
+                        | Özel Program
+                    h4.offer__box-sub.heading-quaternary.color-black-light
+                        | Her öğrencimize hazırladığımız bireysel çalışma programı ile
+                        | verimi en üst düzeye çıkarıyoruz.
+                .offer__box
+                    .offer__box-container
+                        svg.offer__box-container-icon
+                            use(xlink:href='/img/sprite.svg#icon-network')
+                    h2.offer__box-main.heading-secondary.color-black-dark
+                        | Özel Program
+                    h4.offer__box-sub.heading-quaternary.color-black-light
+                        | Her öğrencimize hazırladığımız bireysel çalışma programı ile
+                        | verimi en üst düzeye çıkarıyoruz.
+                .offer__box
+                    .offer__box-container
+                        svg.offer__box-container-icon
+                            use(xlink:href='/img/sprite.svg#icon-table')
+                    h2.offer__box-main.heading-secondary.color-black-dark
+                        | Özel Program
+                    h4.offer__box-sub.heading-quaternary.color-black-light
+                        | Her öğrencimize hazırladığımız bireysel çalışma programı ile
+                        | verimi en üst düzeye çıkarıyoruz.
+                .offer__box
+                    .offer__box-container
+                        svg.offer__box-container-icon
+                            use(xlink:href='/img/sprite.svg#icon-pie-chart')
+                    h2.offer__box-main.heading-secondary.color-black-dark
+                        | Özel Program
+                    h4.offer__box-sub.heading-quaternary.color-black-light
+                        | Her öğrencimize hazırladığımız bireysel çalışma programı ile
+                        | verimi en üst düzeye çıkarıyoruz.
+                .offer__box
+                    .offer__box-container
+                        svg.offer__box-container-icon
+                            use(xlink:href='/img/sprite.svg#icon-database')
+                    h2.offer__box-main.heading-secondary.color-black-dark
+                        | Özel Program
+                    h4.offer__box-sub.heading-quaternary.color-black-light
+                        | Her öğrencimize hazırladığımız bireysel çalışma programı ile
+                        | verimi en üst düzeye çıkarıyoruz.
+                .offer__box
+                    .offer__box-container
+                        svg.offer__box-container-icon
+                            use(xlink:href='/img/sprite.svg#icon-rocket')
+                    h2.offer__box-main.heading-secondary.color-black-dark
+                        | Özel Program
+                    h4.offer__box-sub.heading-quaternary.color-black-light
+                        | Her öğrencimize hazırladığımız bireysel çalışma programı ile
+                        | verimi en üst düzeye çıkarıyoruz.
+        .offer__img
+            img(src='/img/offer-img.jpeg' alt='')
+    section.location
+        .location__img
+            img(src='/img/location-img.jpeg' alt='')
+        .location__info
+            h2.heading-secondary.mb-m.bolder PARADOKS EĞİTİM MERKEZİ
+            h4.heading-quaternary.lighter.location__info-detail
+                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla itaque,
+                | cumque beatae quia iusto cum odio provident rerum temporibus porro!s
+                | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque,
+                | voluptate? dolor sit amet consectetur adipisicing elit. Doloremque,
+                | voluptate?
+            h4.heading-quaternary.lighter.location__info-detail
+                | Cumque psum dolor sit amet consectetur adipisicing elit. Nulla itaque,
+                | cumque beatae quia iusto cum odio provident rerum temporibus porro!s
+    section.lessons
+        .text-center
+            h2.heading-secondary.bolder.mb-s.splash
+                | Program Derslerimiz
+        h4.heading-quaternary.mb-l.color-black-light
+            | Separated they live in. A small river named Duden flows by their place
+            | and supplies it with the necessary regelialia. It is a paradisematic
+            | countrylorem20,Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            | Nulla voluptate ratione minima corporis ipsam rem accusamus veritatis
+            | voluptatibus? Dolorum, neque!
+        .lessons__boxes
+            .lessons__box
+                img.lessons__box--img.mb-s(src='/img/lessons/lessons-4.jpeg' alt='')
+                .lessons__icons
+                    svg.lessons-icon
+                        use(xlink:href='/img/sprite.svg#icon-user')
+                    span.lessons-text MR.KHAN
+                    svg.lessons-icon
+                        use(xlink:href='/img/sprite.svg#icon-calendar')
+                    span.lessons-text 10 SETS
+                    svg.lessons-icon
+                        use(xlink:href='/img/sprite.svg#icon-clock')
+                    span.lessons-text 4 YEARS
+                h2.heading-secondary.mb-s.heading-secondary-lessons.color-black-dark
+                    | Yabancı Dil
+                h4.heading-quaternary.heading-quaternary-lessons.color-black-light
+                    | Separated they live in. A small river named Duden flows by their
+                    | place and supplies it with the necessary regelialia. It is a
+                    | paradisematic country
+            .lessons__box
+                img.lessons__box--img.mb-s(src='/img/lessons/lessons-3.jpeg' alt='')
+                .lessons__icons
+                    svg.lessons-icon
+                        use(xlink:href='/img/sprite.svg#icon-user')
+                    span.lessons-text MR.KHAN
+                    svg.lessons-icon
+                        use(xlink:href='/img/sprite.svg#icon-calendar')
+                    span.lessons-text 10 SETS
+                    svg.lessons-icon
+                        use(xlink:href='/img/sprite.svg#icon-clock')
+                    span.lessons-text 4 YEARS
+                h2.heading-secondary.mb-s.heading-secondary-lessons.color-black-dark
+                    | Matematik
+                h4.heading-quaternary.heading-quaternary-lessons.color-black-light
+                    | Separated they live in. A small river named Duden flows by their
+                    | place and supplies it with the necessary regelialia. It is a
+                    | paradisematic country
+            .lessons__box
+                img.lessons__box--img.mb-s(src='/img/lessons/lessons-2.jpeg' alt='')
+                .lessons__icons
+                    svg.lessons-icon
+                        use(xlink:href='/img/sprite.svg#icon-user')
+                    span.lessons-text MR.KHAN
+                    svg.lessons-icon
+                        use(xlink:href='/img/sprite.svg#icon-calendar')
+                    span.lessons-text 10 SETS
+                    svg.lessons-icon
+                        use(xlink:href='/img/sprite.svg#icon-clock')
+                    span.lessons-text 4 YEARS
+                h2.heading-secondary.mb-s.heading-secondary-lessons.color-black-dark
+                    | Fen Bilimleri
+                h4.heading-quaternary.heading-quaternary-lessons.color-black-light
+                    | Separated they live in. A small river named Duden flows by their
+                    | place and supplies it with the necessary regelialia. It is a
+                    | paradisematic country
+            .lessons__box
+                img.lessons__box--img.mb-s(src='/img/lessons/lessons-1.jpeg' alt='')
+                .lessons__icons
+                    svg.lessons-icon
+                        use(xlink:href='/img/sprite.svg#icon-user')
+                    span.lessons-text MR.KHAN
+                    svg.lessons-icon
+                        use(xlink:href='/img/sprite.svg#icon-calendar')
+                    span.lessons-text 10 SETS
+                    svg.lessons-icon
+                        use(xlink:href='/img/sprite.svg#icon-clock')
+                    span.lessons-text 4 YEARS
+                h2.heading-secondary.mb-s.heading-secondary-lessons.color-black-dark
+                    | Sosyal Bilimler
+                h4.heading-quaternary.heading-quaternary-lessons.color-black-light
+                    | Separated they live in. A small river named Duden flows by their
+                    | place and supplies it with the necessary regelialia. It is a
+                    | paradisematic country
+    section.students-comment
+        .text-center
+            h2.heading-secondary.heading-secondary-comments.splash.text-center.bolder
+                | Öğrencilerimizin Gözünden
+        .blog-slider
+            .blog-slider__wrp.swiper-wrapper
+                each comment in comments
+                    .blog-slider__item.swiper-slide
+                        .blog-slider__img
+                            img(src=`/img/comments/${comment.photo}` alt='')
+                        .blog-slider__content
+                            span.blog-slider__code.lighter= comment.createdAt.toLocaleString('tr-tr', {day:'numeric',month:'long',year:'numeric'})
+                            .blog-slider__title.bolder= comment.subject
+                            .blog-slider__text.lighter= comment.review
+                            span.blog-slider__button= comment.name
+            .blog-slider__pagination
+        script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js')
+        script(type='text/javascript' src='/js/script.js')
+    section.announcment
+        .text-center
+            h2.heading-secondary.heading-secondary-announcment.text-center.bolder.splash
+                | Duyurular
+        .announcment-slider
+            each announcment in announcments
+                .announcment-slide
+                    .testimonial
+                        h2.heading-secondary.bolder.mb-s.color-black-dark= announcment.subject
+                        blockquote.heading-quaternary.color-black-light= announcment.announcment
+                        address.testimonial__author
+                            img.testimonial__photo(src='/img/logo.png' alt='')
+                            h6.testimonial__name= announcment.creator
+                            p.testimonial__location Paradoks Eğitim Kurumları
+                        span.testimonial__date= announcment.createdAt.toLocaleString('tr-tr', {day:'numeric',month:'long',year:'numeric'})
+                a.testimonial__button(href='/duyurular') Tümünü Gör
+            button.announcment-slider-btn-left.slider__btn.slider__btn--left
+                | &larr;
+            button.announcment-slider-btn-right.slider__btn.slider__btn--right
+                | &rarr;

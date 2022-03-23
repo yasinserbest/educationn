@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='/css/main.css')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap' rel='stylesheet')
+  body
+    section.login
+      .card
+        .card__img
+          img(src='/img/login.png' alt='')
+        form.card__form
+          h2.heading-secondary.bolder.mb-s.splash Giriş Yap
+          .card__form--wrapper
+            label.card__form--wrapper-label(for='') E-mail
+            input#email.card__form--wrapper-input(type='email', placeholder='you@example.com', required)
+          .card__form--wrapper
+            label.card__form--wrapper-label(for='') Şifre
+            input#password.card__form--wrapper-input(type='password', placeholder='••••••••', required)
+          .card__form--wrapper
+            a(href="/sifremiUnuttum") Şifremi Unuttum
+          button.btn.btn-corner.mt-m Giriş Yap
+    //script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js")
+    //script(src="/js/login.js")
+    script(src="/js/bundle.js")

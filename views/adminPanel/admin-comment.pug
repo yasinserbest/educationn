@@ -1,0 +1,29 @@
+extend admin-base
+block content
+    .admin__refactor
+        .text-center
+            h2.heading-secondary.bolder.mb-s.splash
+                | Öğrenci Yorum Düzenleme
+        form.comments#comments
+            .comments__group
+                label.comments__group--label(for='') İsim Soyisim
+                input#name.comments__group--input(type='text')
+            .comments__group
+                label.comments__group--label(for='') Başlık
+                input#subject.comments__group--input(type='text')
+            .comments__group
+                label.comments__group--label(for='') Mesaj
+                textarea#review.comments__group--input.comments__group--message(cols='30' rows='10')
+            .comments__group
+                input(type='file', accept='image/*',id='photo',name='photo')
+            button#btn-save.btn.btn-corner KAYDET
+        each comment in comments
+            .updating#delete
+                .updating__image
+                    img(src=`/img/comments/${comment.photo}` alt=`img`)
+                span.updating__topic= comment.subject
+                span.updating__date= comment.name
+                button.btn-x(data-id=`${comment.id}`)
+                    svg.updating__x
+                        use(xlink:href='/img/sprite.svg#icon-cross')
+                
