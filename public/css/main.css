@@ -154,6 +154,10 @@ body {
   }
 }
 
+.display-none {
+  display: none;
+}
+
 .active {
   color: var(--color-green-light-1) !important;
 }
@@ -844,7 +848,7 @@ body {
   }
 }
 
-@media (max-width: 37.5em) {
+@media (max-width: 28em) {
   .school__logo-img {
     height: 5vh;
   }
@@ -852,6 +856,12 @@ body {
 
 .school__contactUs {
   text-decoration: none;
+}
+
+@media (max-width: 37.5em) {
+  .school__login {
+    display: none;
+  }
 }
 
 .school__name {

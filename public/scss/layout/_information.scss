@@ -29,13 +29,18 @@
         height: 7vh;
         width: 100%;
       }
-      @include respond(phone-large) {
+      @include respond(phone-medium) {
         height: 5vh;
       }
     }
   }
   &__contactUs {
     text-decoration: none;
+  }
+  &__login {
+    @include respond(phone-large) {
+      display: none;
+    }
   }
 
   &__name {
