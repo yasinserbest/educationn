@@ -5,7 +5,7 @@ export const createData = async (data, path) => {
   try {
     const res = await axios({
       method: "POST",
-      url: `http://127.0.0.1:3000/v1/admin/${path}/`,
+      url: `/v1/admin/${path}/`,
       data,
     });
     if (res.data.status === "success") {
@@ -27,7 +27,7 @@ export const updateData = async (
   try {
     const res = await axios({
       method: "PATCH",
-      url: "http://127.0.0.1:3000/v1/admin/kullanici/sifremiGuncelle",
+      url: "/v1/admin/kullanici/sifremiGuncelle",
       data: {
         passwordCurrent,
         password,
@@ -48,10 +48,8 @@ export const updateData = async (
 
 export const deleteData = async (path, id) => {
   try {
-    const res = await axios.delete(
-      `http://127.0.0.1:3000/v1/admin/${path}/${id}`
-    );
-    console.log(res.data);
+    const res = await axios.delete(`/v1/admin/${path}/${id}`);
+    //console.log(res.data);
     if (res.data.status === "success") {
       showAlert("success", "Kayıt başarıyla silindi. Bekleyiniz...");
       window.setTimeout(() => {

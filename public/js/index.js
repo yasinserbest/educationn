@@ -88,7 +88,6 @@ if (passwordForm) {
     const passwordCurrent = document.getElementById("passwordCurrent").value;
     const password = document.getElementById("password").value;
     const passwordConfirm = document.getElementById("passwordConfirm").value;
-    console.log(passwordCurrent, password, passwordConfirm);
     updateData(passwordCurrent, password, passwordConfirm);
   });
 }

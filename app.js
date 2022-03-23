@@ -10,6 +10,7 @@ const hpp = require("hpp");
 const cookieParser = require("cookie-parser");
 const AppError = require("./utils/appError");
 const globalErrorHandler = require("./controllers/errorController");
+const compression = require("compression");
 
 const galleryRouter = require("./routes/galleryRoutes");
 const commentRouter = require("./routes/commentRoutes");
@@ -62,6 +63,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(express.json()); //req.body diye almak için
+
+app.use(compression());
 
 app.use("/", viewRouter); //bunu diğerlerinin de en üstüne koy
 app.use("/v1", homePageRouter);

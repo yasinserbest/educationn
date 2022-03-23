@@ -5,7 +5,7 @@ export const contactMail = async (name, subject, email, message) => {
   try {
     const res = await axios({
       method: "POST",
-      url: `http://127.0.0.1:3000/v1/iletisim/`,
+      url: `/v1/iletisim/`,
       data: {
         name,
         subject,
