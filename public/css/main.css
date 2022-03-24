@@ -981,6 +981,9 @@ body {
 }
 
 .navbar__items {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1023,7 +1026,7 @@ body {
 
 @media (max-width: 28em) {
   .navbar__item {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -1396,6 +1399,13 @@ body {
   .offer__box-container-icon {
     height: 2rem;
     width: 2rem;
+  }
+}
+
+@media (max-width: 28em) {
+  .offer__box-container-icon {
+    -webkit-transform: translate(100%, 100%);
+            transform: translate(100%, 100%);
   }
 }
 

@@ -34,7 +34,7 @@
   }
 }
 
-/////NELER SUNUYORUZ////////
+/////sectİon offer////////
 .section__offer {
   display: flex;
   justify-content: space-between;
@@ -84,6 +84,9 @@
         @include respond(phone-large) {
           height: 2rem;
           width: 2rem;
+        }
+        @include respond(phone-medium) {
+          transform: translate(100%, 100%);
         }
       }
     }
