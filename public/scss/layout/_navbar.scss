@@ -1,6 +1,7 @@
 .navbar {
   background-color: var(--color-primary-1);
   &__items {
+    align-items: center;
     display: flex;
     list-style-type: none;
     margin-left: 4rem;
@@ -25,7 +26,7 @@
       padding: 1rem 0.5rem;
     }
     @include respond(phone-medium) {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
   }
   &__tag:hover {
