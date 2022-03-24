@@ -28,6 +28,9 @@
       width: 50rem;
       justify-content: space-evenly;
     }
+    @include respond(phone-medium) {
+      width: 40rem;
+    }
   }
   &__logo {
     height: 20rem;
@@ -128,6 +131,10 @@
       margin-top: 2rem;
       font-size: 1.5rem;
       text-align: center;
+    }
+    @include respond(phone-medium) {
+      margin-top: 4rem;
+      width: 40rem;
     }
   }
 }

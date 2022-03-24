@@ -5,6 +5,9 @@
   @include respond(phone-large) {
     font-size: 3rem;
   }
+  @include respond(phone-medium) {
+    font-size: 2.3rem;
+  }
 }
 
 .heading-secondary {
@@ -18,6 +21,9 @@
   }
   @include respond(phone-large) {
     font-size: 2.2rem;
+  }
+  @include respond(phone-medium) {
+    font-size: 1.6rem;
   }
   &--error {
     color: red;

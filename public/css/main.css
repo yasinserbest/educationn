@@ -108,6 +108,12 @@ body {
   }
 }
 
+@media (max-width: 28em) {
+  .heading-primary {
+    font-size: 2.3rem;
+  }
+}
+
 .heading-secondary {
   color: white;
   font-size: 3rem;
@@ -121,6 +127,12 @@ body {
 @media (max-width: 37.5em) {
   .heading-secondary {
     font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 28em) {
+  .heading-secondary {
+    font-size: 1.6rem;
   }
 }
 
@@ -858,6 +870,14 @@ body {
   text-decoration: none;
 }
 
+@media (max-width: 28em) {
+  .school__contactUs {
+    text-align: center;
+    -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+  }
+}
+
 @media (max-width: 37.5em) {
   .school__login {
     display: none;
@@ -1001,6 +1021,12 @@ body {
   }
 }
 
+@media (max-width: 28em) {
+  .navbar__item {
+    font-size: 0.9rem;
+  }
+}
+
 .navbar__tag:hover {
   color: var(--color-green-light-1);
   -webkit-transition: color 0.4s;
@@ -1058,6 +1084,12 @@ body {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 28em) {
+  .footer__wrapper {
+    width: 40rem;
   }
 }
 
@@ -1220,6 +1252,13 @@ body {
     margin-top: 2rem;
     font-size: 1.5rem;
     text-align: center;
+  }
+}
+
+@media (max-width: 28em) {
+  .footer__copy {
+    margin-top: 4rem;
+    width: 40rem;
   }
 }
 

@@ -24,6 +24,9 @@
     @include respond(phone-large) {
       padding: 1rem 0.5rem;
     }
+    @include respond(phone-medium) {
+      font-size: 0.9rem;
+    }
   }
   &__tag:hover {
     color: var(--color-green-light-1);

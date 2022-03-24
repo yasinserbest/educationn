@@ -36,6 +36,10 @@
   }
   &__contactUs {
     text-decoration: none;
+    @include respond(phone-medium) {
+      text-align: center;
+      box-decoration-break: clone;
+    }
   }
   &__login {
     @include respond(phone-large) {
