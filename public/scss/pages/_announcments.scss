@@ -1,8 +1,15 @@
 .announcments {
   width: 80%;
   margin: 0 auto;
+
+  @include respond(phone-medium) {
+    width: 95%;
+  }
 }
 .one-announcment {
   padding: 3rem;
   position: relative;
+  @include respond(phone-medium) {
+    padding: 2rem;
+  }
 }

@@ -2016,9 +2016,21 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 28em) {
+  .announcments {
+    width: 95%;
+  }
+}
+
 .one-announcment {
   padding: 3rem;
   position: relative;
+}
+
+@media (max-width: 28em) {
+  .one-announcment {
+    padding: 2rem;
+  }
 }
 
 .forgotPassword {
